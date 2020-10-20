@@ -22,10 +22,10 @@
 
 ##### Exemplo: <code>git commit -m ":package: Added Tela Vendas" </code>
 
-- [x] :package: nova funcionalidade
-- [x] :up: atualização 
-- [x] :wrench: correção de bug 
-- [x] :white_check_mark: releases 
+- [x] :package: nova funcionalidade (: package :)
+- [x] :up: atualização (: up :)
+- [x] :wrench: correção de bug (: wrench :)
+- [x] :white_check_mark: releases (: white_check_mark :)
 
 
 
