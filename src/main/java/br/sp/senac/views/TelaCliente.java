@@ -5,6 +5,11 @@
  */
 package br.sp.senac.views;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.net.URL;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -20,6 +25,18 @@ public class TelaCliente extends javax.swing.JFrame {
     public TelaCliente() {
         initComponents();
         this.setLocationRelativeTo(null);
+
+        // Setando Icone Janela
+        URL IconRoute = getClass().getResource("/IconLogo-S.png");
+        Image IconWindow = Toolkit.getDefaultToolkit().getImage(IconRoute);
+        this.setIconImage(IconWindow);
+
+        // Editar Header e Body Tabela Clientes
+        tbClientes.getTableHeader().setFont(new Font("Sagoe UI", Font.BOLD, 13));
+        tbClientes.getTableHeader().setOpaque(false);
+        tbClientes.getTableHeader().setBackground(new Color(15, 76, 117));
+        tbClientes.getTableHeader().setForeground(new Color(190, 190, 190));
+        tbClientes.setRowHeight(25);
     }
 
     /**
@@ -75,6 +92,8 @@ public class TelaCliente extends javax.swing.JFrame {
         setTitle("Cadastrar Cliente");
         setResizable(false);
 
+        panelBg.setBackground(new java.awt.Color(224, 224, 224));
+
         panelSidebarTop.setBackground(new java.awt.Color(15, 76, 117));
 
         panelLogoProduto.setBackground(new java.awt.Color(15, 76, 117));
@@ -84,8 +103,8 @@ public class TelaCliente extends javax.swing.JFrame {
 
         lblLojaRoupaLogoProduto.setFont(new java.awt.Font("Old English Text MT", 1, 48)); // NOI18N
         lblLojaRoupaLogoProduto.setForeground(new java.awt.Color(190, 176, 40));
-        lblLojaRoupaLogoProduto.setText("Loja-Roupa");
-        panelLogoProduto.add(lblLojaRoupaLogoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 290, 41));
+        lblLojaRoupaLogoProduto.setText("Synthesia");
+        panelLogoProduto.add(lblLojaRoupaLogoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 240, 41));
 
         lblLineProduto.setBackground(new java.awt.Color(190, 190, 190));
         lblLineProduto.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -109,7 +128,7 @@ public class TelaCliente extends javax.swing.JFrame {
         panelLogoProduto.add(panelLineFullLogoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 290, 10));
 
         lblCadastroCliente.setFont(new java.awt.Font("Courier New", 1, 36)); // NOI18N
-        lblCadastroCliente.setForeground(new java.awt.Color(255, 255, 255));
+        lblCadastroCliente.setForeground(new java.awt.Color(190, 176, 40));
         lblCadastroCliente.setText("Cadastro de Cliente");
 
         javax.swing.GroupLayout panelSidebarTopLayout = new javax.swing.GroupLayout(panelSidebarTop);
@@ -117,7 +136,7 @@ public class TelaCliente extends javax.swing.JFrame {
         panelSidebarTopLayout.setHorizontalGroup(
             panelSidebarTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelSidebarTopLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(52, 52, 52)
                 .addComponent(panelLogoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblCadastroCliente)
@@ -133,6 +152,7 @@ public class TelaCliente extends javax.swing.JFrame {
                 .addGap(15, 15, 15))
         );
 
+        panelContainer.setBackground(new java.awt.Color(224, 224, 224));
         panelContainer.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(15, 76, 117), 1, true));
         panelContainer.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -143,11 +163,12 @@ public class TelaCliente extends javax.swing.JFrame {
 
         txtIdCliente.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
         txtIdCliente.setForeground(new java.awt.Color(27, 38, 44));
+        txtIdCliente.setPreferredSize(new java.awt.Dimension(50, 20));
         panelContainer.add(txtIdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 40, 254, 30));
 
         lblNomeCliente.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         lblNomeCliente.setForeground(new java.awt.Color(27, 38, 44));
-        lblNomeCliente.setText("Nome:");
+        lblNomeCliente.setText("Nome:*");
         panelContainer.add(lblNomeCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 19, -1, -1));
 
         txtNomeCliente.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
@@ -156,7 +177,7 @@ public class TelaCliente extends javax.swing.JFrame {
 
         lblEnderecoCliente.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         lblEnderecoCliente.setForeground(new java.awt.Color(27, 38, 44));
-        lblEnderecoCliente.setText("Endereço:");
+        lblEnderecoCliente.setText("Endereço:*");
         panelContainer.add(lblEnderecoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, -1, -1));
 
         txtEnderecoCliente.setForeground(new java.awt.Color(27, 38, 44));
@@ -173,11 +194,12 @@ public class TelaCliente extends javax.swing.JFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        panelContainer.add(formatCpfCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 240, 30));
+        formatCpfCliente.setPreferredSize(new java.awt.Dimension(50, 20));
+        panelContainer.add(formatCpfCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 260, 30));
 
         lblEmailCliente.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         lblEmailCliente.setForeground(new java.awt.Color(27, 38, 44));
-        lblEmailCliente.setText("Email:");
+        lblEmailCliente.setText("Email:*");
         panelContainer.add(lblEmailCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, -1, -1));
 
         txtEmailCliente.setForeground(new java.awt.Color(27, 38, 44));
@@ -209,7 +231,7 @@ public class TelaCliente extends javax.swing.JFrame {
 
         lblCelularCliente.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         lblCelularCliente.setForeground(new java.awt.Color(27, 38, 44));
-        lblCelularCliente.setText("Celular:");
+        lblCelularCliente.setText("Celular:*");
         panelContainer.add(lblCelularCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 110, -1, -1));
 
         formatCelularCliente.setForeground(new java.awt.Color(27, 38, 44));
@@ -221,6 +243,9 @@ public class TelaCliente extends javax.swing.JFrame {
         formatCelularCliente.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
         panelContainer.add(formatCelularCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 130, 170, 30));
 
+        panelBotoesCliente.setBackground(new java.awt.Color(224, 224, 224));
+
+        btnCancelarCadastro.setBackground(new java.awt.Color(224, 224, 224));
         btnCancelarCadastro.setFont(new java.awt.Font("Courier New", 1, 14)); // NOI18N
         btnCancelarCadastro.setForeground(new java.awt.Color(27, 38, 44));
         btnCancelarCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8_cancel_24px.png"))); // NOI18N
@@ -231,6 +256,7 @@ public class TelaCliente extends javax.swing.JFrame {
             }
         });
 
+        btnRemoverCliente.setBackground(new java.awt.Color(224, 224, 224));
         btnRemoverCliente.setFont(new java.awt.Font("Courier New", 1, 14)); // NOI18N
         btnRemoverCliente.setForeground(new java.awt.Color(27, 38, 44));
         btnRemoverCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8_trash_24px.png"))); // NOI18N
@@ -241,6 +267,7 @@ public class TelaCliente extends javax.swing.JFrame {
             }
         });
 
+        btnCadastrar.setBackground(new java.awt.Color(224, 224, 224));
         btnCadastrar.setFont(new java.awt.Font("Courier New", 1, 14)); // NOI18N
         btnCadastrar.setForeground(new java.awt.Color(27, 38, 44));
         btnCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8_registration_24px.png"))); // NOI18N
@@ -251,11 +278,13 @@ public class TelaCliente extends javax.swing.JFrame {
             }
         });
 
+        btnEditarCliente.setBackground(new java.awt.Color(224, 224, 224));
         btnEditarCliente.setFont(new java.awt.Font("Courier New", 1, 14)); // NOI18N
         btnEditarCliente.setForeground(new java.awt.Color(27, 38, 44));
         btnEditarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8_edit_24px.png"))); // NOI18N
         btnEditarCliente.setText("Editar");
 
+        btnSalvar.setBackground(new java.awt.Color(224, 224, 224));
         btnSalvar.setFont(new java.awt.Font("Courier New", 1, 14)); // NOI18N
         btnSalvar.setForeground(new java.awt.Color(27, 38, 44));
         btnSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8_save_24px.png"))); // NOI18N
@@ -266,6 +295,7 @@ public class TelaCliente extends javax.swing.JFrame {
             }
         });
 
+        btnLimparCadastro.setBackground(new java.awt.Color(224, 224, 224));
         btnLimparCadastro.setFont(new java.awt.Font("Courier New", 1, 14)); // NOI18N
         btnLimparCadastro.setForeground(new java.awt.Color(27, 38, 44));
         btnLimparCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8_broom_24px.png"))); // NOI18N
@@ -300,14 +330,15 @@ public class TelaCliente extends javax.swing.JFrame {
             panelBotoesClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBotoesClienteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelBotoesClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSalvar)
+                .addGroup(panelBotoesClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelBotoesClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnEditarCliente)
                         .addComponent(btnRemoverCliente)
                         .addComponent(btnCancelarCadastro)
-                        .addComponent(btnLimparCadastro)))
+                        .addComponent(btnLimparCadastro))
+                    .addGroup(panelBotoesClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnSalvar)))
                 .addContainerGap())
         );
 
@@ -323,26 +354,23 @@ public class TelaCliente extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Nome", "CPF", "Endereço", "Email", "Telefone"
+                "ID", "Nome", "CPF", "Endereço", "Email", "Celular"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
-            };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        tbClientes.setToolTipText("Tabela Produtos");
+        tbClientes.setToolTipText("Tabela Clientes");
+        tbClientes.setFocusable(false);
+        tbClientes.setIntercellSpacing(new java.awt.Dimension(0, 0));
         tbClientes.setShowHorizontalLines(false);
+        tbClientes.setShowVerticalLines(false);
+        tbClientes.getTableHeader().setReorderingAllowed(false);
         spanelClientes.setViewportView(tbClientes);
         if (tbClientes.getColumnModel().getColumnCount() > 0) {
             tbClientes.getColumnModel().getColumn(0).setResizable(false);
@@ -425,20 +453,36 @@ public class TelaCliente extends javax.swing.JFrame {
         String enderecoCliente = txtEnderecoCliente.getText();
         String cpfCliente = formatCpfCliente.getText();
         String emailCliente = txtEmailCliente.getText();
-        String telCliente = formatTelefoneCliente.getText();
+        String celCliente = formatCelularCliente.getText();
 
-        if (cbxSexoCliente.getSelectedIndex() == 0) {
-            JOptionPane.showMessageDialog(this, "Selecione o sexo do cliente! ", "Aviso", JOptionPane.WARNING_MESSAGE);
+        // Validação de campos simples e agrupada CLIENTE ( sem detalhes das tratativas )
+        try {
+            if ((cbxSexoCliente.getSelectedIndex() != 0)
+                    && (txtNomeCliente.getText().length() > 5)
+                    && (txtEnderecoCliente.getText().length() > 10)
+                    && (formatCpfCliente.getText().length() == 11)
+                    && (txtEmailCliente.getText().length() > 10)
+                    && (formatCelularCliente.getText().length() > 11)) {
+                
+                JOptionPane.showMessageDialog(this, "Cadastro realizado com sucesso! ", "Aviso", JOptionPane.WARNING_MESSAGE);
+                
+                DefaultTableModel dtmClientes = (DefaultTableModel) tbClientes.getModel();
+                dtmClientes.addRow(new Object[]{
+                    idCliente,
+                    nomeCliente,
+                    cpfCliente,
+                    enderecoCliente,
+                    emailCliente,
+                    celCliente,});
+
+            } else {
+                JOptionPane.showMessageDialog(this, "Alguns campos não foram preenchidos corretamente! ", "Aviso", JOptionPane.WARNING_MESSAGE);
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Erro ao cadastrar o cliente!", "Erro", JOptionPane.ERROR_MESSAGE);
         }
 
-        DefaultTableModel dtmClientes = (DefaultTableModel) tbClientes.getModel();
-        dtmClientes.addRow(new Object[]{
-            idCliente,
-            nomeCliente,
-            cpfCliente,
-            enderecoCliente,
-            emailCliente,
-            telCliente,});
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btnCancelarCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarCadastroActionPerformed
@@ -447,8 +491,7 @@ public class TelaCliente extends javax.swing.JFrame {
 
     private void btnRemoverClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverClienteActionPerformed
         DefaultTableModel dtmClientes = (DefaultTableModel) tbClientes.getModel();
-        
-        
+
         boolean resultadoRemove = false;
 
         try {
