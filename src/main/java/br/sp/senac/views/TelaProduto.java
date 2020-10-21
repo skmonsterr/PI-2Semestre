@@ -136,7 +136,7 @@ public class TelaProduto extends javax.swing.JFrame {
         panelLogoProduto.add(panelLineFullLogoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 290, 10));
 
         lblCadastroProduto.setFont(new java.awt.Font("Courier New", 1, 36)); // NOI18N
-        lblCadastroProduto.setForeground(new java.awt.Color(255, 255, 255));
+        lblCadastroProduto.setForeground(new java.awt.Color(190, 176, 40));
         lblCadastroProduto.setText("Cadastro de Produto");
 
         javax.swing.GroupLayout panelSidebarTopLayout = new javax.swing.GroupLayout(panelSidebarTop);

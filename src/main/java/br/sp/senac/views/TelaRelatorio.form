@@ -44,26 +44,27 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="panelSidebarTop" alignment="0" max="32767" attributes="0"/>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="spanelProdutos" max="32767" attributes="0"/>
-                      <Component id="panelFiltro" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="separadorBotoesDown" alignment="0" max="32767" attributes="0"/>
-                          <Component id="panelBotoesProduto5" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="separadorBotoesUp" max="32767" attributes="0"/>
-                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="separadorBotoesDown" alignment="0" max="32767" attributes="0"/>
+                              <Component id="panelBotoesProduto5" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="separadorBotoesUp" min="-2" pref="1272" max="-2" attributes="0"/>
+                                  <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="47" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="spanelProdutos" max="32767" attributes="0"/>
+                              <Component id="panelFiltro" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
           </Group>
@@ -72,22 +73,17 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <Component id="panelSidebarTop" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Component id="panelFiltro" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="134" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <Component id="separadorBotoesUp" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="panelBotoesProduto5" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="separadorBotoesDown" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Component id="spanelProdutos" min="-2" pref="298" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-              </Group>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="346" max="-2" attributes="0"/>
-                      <Component id="separadorBotoesUp" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="panelBotoesProduto5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="separadorBotoesDown" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="346" max="32767" attributes="0"/>
-                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -215,7 +211,7 @@
                   <Font name="Courier New" size="36" style="1"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                  <Color blue="28" green="b0" red="be" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Relatorio"/>
               </Properties>
@@ -294,7 +290,7 @@
                               <Component id="jRadioButton11" linkSize="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="476" max="32767" attributes="0"/>
+                      <EmptySpace pref="396" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -358,10 +354,12 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jRadioButton10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jRadioButton11" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jRadioButton10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
@@ -631,7 +629,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Component id="btnBuscarRelatorio" linkSize="1" min="-2" pref="146" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="413" max="-2" attributes="0"/>
                       <Component id="btnLimparRelatorio" linkSize="1" min="-2" max="-2" attributes="0"/>
@@ -639,6 +637,7 @@
                       <Component id="btnRemoverRelatorio" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="btnCancelarRelatorio" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

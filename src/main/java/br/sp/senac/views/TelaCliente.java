@@ -128,7 +128,7 @@ public class TelaCliente extends javax.swing.JFrame {
         panelLogoProduto.add(panelLineFullLogoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 290, 10));
 
         lblCadastroCliente.setFont(new java.awt.Font("Courier New", 1, 36)); // NOI18N
-        lblCadastroCliente.setForeground(new java.awt.Color(255, 255, 255));
+        lblCadastroCliente.setForeground(new java.awt.Color(190, 176, 40));
         lblCadastroCliente.setText("Cadastro de Cliente");
 
         javax.swing.GroupLayout panelSidebarTopLayout = new javax.swing.GroupLayout(panelSidebarTop);
@@ -163,6 +163,7 @@ public class TelaCliente extends javax.swing.JFrame {
 
         txtIdCliente.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
         txtIdCliente.setForeground(new java.awt.Color(27, 38, 44));
+        txtIdCliente.setPreferredSize(new java.awt.Dimension(50, 20));
         panelContainer.add(txtIdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 40, 254, 30));
 
         lblNomeCliente.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
@@ -193,7 +194,8 @@ public class TelaCliente extends javax.swing.JFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        panelContainer.add(formatCpfCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 240, 30));
+        formatCpfCliente.setPreferredSize(new java.awt.Dimension(50, 20));
+        panelContainer.add(formatCpfCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 260, 30));
 
         lblEmailCliente.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         lblEmailCliente.setForeground(new java.awt.Color(27, 38, 44));

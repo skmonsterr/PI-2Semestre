@@ -115,7 +115,7 @@ public class TelaRelatorio extends javax.swing.JFrame {
         panelLogoRelatorio.add(panelLineFullLogoProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 290, 10));
 
         lblRelatorio.setFont(new java.awt.Font("Courier New", 1, 36)); // NOI18N
-        lblRelatorio.setForeground(new java.awt.Color(255, 255, 255));
+        lblRelatorio.setForeground(new java.awt.Color(190, 176, 40));
         lblRelatorio.setText("Relatorio");
 
         javax.swing.GroupLayout panelSidebarTopLayout = new javax.swing.GroupLayout(panelSidebarTop);
@@ -306,7 +306,7 @@ public class TelaRelatorio extends javax.swing.JFrame {
                         .addComponent(jRadioButton10)
                         .addGap(18, 18, 18)
                         .addComponent(jRadioButton11)))
-                .addContainerGap(476, Short.MAX_VALUE))
+                .addContainerGap(396, Short.MAX_VALUE))
         );
 
         panelFiltroLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jRadioButton10, jRadioButton11, jRadioButton6, jRadioButton7, jRadioButton8, jRadioButton9});
@@ -358,10 +358,11 @@ public class TelaRelatorio extends javax.swing.JFrame {
                                 .addComponent(jRadioButton5))))
                     .addGroup(panelFiltroLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(panelFiltroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton10)
+                        .addGroup(panelFiltroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jRadioButton11)
-                            .addComponent(jRadioButton9))))
+                            .addGroup(panelFiltroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jRadioButton10)
+                                .addComponent(jRadioButton9)))))
                 .addGap(37, 37, 37))
         );
 
@@ -445,14 +446,15 @@ public class TelaRelatorio extends javax.swing.JFrame {
         panelBotoesProduto5Layout.setHorizontalGroup(
             panelBotoesProduto5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBotoesProduto5Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addComponent(btnBuscarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(413, 413, 413)
                 .addComponent(btnLimparRelatorio)
                 .addGap(226, 226, 226)
                 .addComponent(btnRemoverRelatorio)
                 .addGap(40, 40, 40)
-                .addComponent(btnCancelarRelatorio))
+                .addComponent(btnCancelarRelatorio)
+                .addGap(6, 6, 6))
         );
 
         panelBotoesProduto5Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnBuscarRelatorio, btnCancelarRelatorio, btnLimparRelatorio, btnRemoverRelatorio});
@@ -476,41 +478,38 @@ public class TelaRelatorio extends javax.swing.JFrame {
         panelBgLayout.setHorizontalGroup(
             panelBgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelSidebarTop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBgLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelBgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(spanelProdutos)
-                    .addComponent(panelFiltro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-            .addGroup(panelBgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panelBgLayout.createSequentialGroup()
-                    .addGap(47, 47, 47)
-                    .addGroup(panelBgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(separadorBotoesDown)
-                        .addComponent(panelBotoesProduto5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBgLayout.createSequentialGroup()
-                            .addComponent(separadorBotoesUp)
-                            .addGap(1, 1, 1)))
-                    .addContainerGap(47, Short.MAX_VALUE)))
+            .addGroup(panelBgLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(panelBgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBgLayout.createSequentialGroup()
+                        .addGroup(panelBgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(separadorBotoesDown)
+                            .addComponent(panelBotoesProduto5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBgLayout.createSequentialGroup()
+                                .addComponent(separadorBotoesUp, javax.swing.GroupLayout.PREFERRED_SIZE, 1272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(1, 1, 1)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panelBgLayout.createSequentialGroup()
+                        .addGroup(panelBgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(spanelProdutos)
+                            .addComponent(panelFiltro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(50, 50, 50))))
         );
         panelBgLayout.setVerticalGroup(
             panelBgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBgLayout.createSequentialGroup()
                 .addComponent(panelSidebarTop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(panelFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
+                .addGap(20, 20, 20)
+                .addComponent(separadorBotoesUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelBotoesProduto5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(separadorBotoesDown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
                 .addComponent(spanelProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38))
-            .addGroup(panelBgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panelBgLayout.createSequentialGroup()
-                    .addGap(346, 346, 346)
-                    .addComponent(separadorBotoesUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(panelBotoesProduto5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(separadorBotoesDown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(346, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
